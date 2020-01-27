@@ -1,0 +1,22 @@
+# antigen related
+source ~/.antigen/antigen.zsh
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+antigen bundle zdharma/fast-syntax-highlighting
+antigen use oh-my-zsh
+
+antigen apply
+
+# pyenv related
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# for WSL folder color
+LS_COLORS="ow=01;36;40" && export LS_COLORS
+
+
+# prompt related
+PROMPT=$'%{$fg_bold[yellow]%}# %{$fg_bold[blue]%}%n %{$fg[white]%}at %{$fg[cyan]%}%m %{$reset_color%}%{$fg[yellow]%}[%~]%{$reset_color%} %{$fg_bold[blue]%}>%{$reset_color%} '
+RPROMPT='%F{red}%(?..%?)%f %{$fg[cyan]%}[%*]'

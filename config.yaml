@@ -1,0 +1,16 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_vimrc:
+    src: vimrc
+    dst: ~/.vimrc
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+profiles:
+  DUANXPS:
+    dotfiles:
+    - f_vimrc
+    - f_zshrc
