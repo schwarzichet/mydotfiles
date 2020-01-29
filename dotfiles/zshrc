@@ -1,5 +1,5 @@
 # antigen related
-source ~/.antigen/antigen.zsh
+source "$HOME/.antigen/antigen.zsh"
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
@@ -18,5 +18,9 @@ LS_COLORS="ow=01;36;40" && export LS_COLORS
 
 
 # prompt related
-PROMPT=$'%{$fg_bold[yellow]%}# %{$fg_bold[blue]%}%n %{$fg[white]%}at %{$fg[cyan]%}%m %{$reset_color%}%{$fg[yellow]%}[%~]%{$reset_color%} %{$fg_bold[blue]%}>%{$reset_color%} '
-RPROMPT='%F{red}%(?..%?)%f %{$fg[cyan]%}[%*]'
+#PROMPT=$'%{$fg_bold[yellow]%}# %{$fg_bold[blue]%}%n %{$fg[white]%}at %{$fg[cyan]%}%m %{$reset_color%}%{$fg[yellow]%}[%~]%{$reset_color%} %{$fg_bold[blue]%}>%{$reset_color%} '
+PROMPT=$'%F{11}# %F{12}%n %F{white}at %F{14}%m %F{yellow}[%~] % %F{12}>%f '
+RPROMPT='%F{red}%(?..%?)%f %F{cyan}[%*]'
+
+#dotdrop
+alias dotdrop=~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml
