@@ -14,3 +14,7 @@ profiles:
     dotfiles:
     - f_vimrc
     - f_zshrc
+  vps:
+    dotfiles:
+    - f_vimrc
+    - f_zshrc
