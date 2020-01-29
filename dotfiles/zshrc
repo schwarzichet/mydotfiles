@@ -22,7 +22,9 @@ LS_COLORS="ow=01;36;40" && export LS_COLORS
 PROMPT=$'%F{11}# %F{12}%n %F{white}at %F{14}%m %F{yellow}[%~] % %F{12}>%f '
 RPROMPT='%F{red}%(?..%?)%f %F{cyan}[%*]'
 
-{%@@ if profile == "home" @@%}
 #dotdrop
+{%@@ if profile == "home" @@%}
 alias dotdrop=~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml
+{%@@ elif profile == "vps" @@%}
+alias dotdrop='dotdrop -p vps'
 {%@@ endif @@%}
