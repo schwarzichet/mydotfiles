@@ -10,7 +10,7 @@ dotfiles:
     src: zshrc
     dst: ~/.zshrc
 profiles:
-  DUANXPS:
+  home:
     dotfiles:
     - f_vimrc
     - f_zshrc
